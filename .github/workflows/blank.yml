@@ -1,4 +1,4 @@
-name: varibale
+name: variable
 on:
   workflow_dispatch:
     inputs:
@@ -27,8 +27,5 @@ jobs:
           echo "${{ github.actor }}"
           echo "${{ vars.kp }}"
       
-      - name: Add numbers
-        id: sum
-        run: echo "::set-output name=sum::$((${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }}))"
-        - name: Save state
-        run: echo "::save-state name={name}::((${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }}))"
+      - name: Save state
+        run: echo "::save-state name=my_sum::$((${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }}))"
