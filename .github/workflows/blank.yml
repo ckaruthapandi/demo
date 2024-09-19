@@ -25,7 +25,6 @@ jobs:
           echo "$cloud $devenv $test"
           echo "${{ runner.name }}"
           echo "${{ github.actor }}"
-          echo "${{ vars.kp }}"
       
       - name: Save state
         run: echo "::save-state name=my_sum::$((${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }}))"
