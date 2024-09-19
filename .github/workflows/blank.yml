@@ -15,8 +15,7 @@ env:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  greeting_job:
+  name_of_the_job:
     runs-on: ubuntu-latest
     env:
       greeting: hello
