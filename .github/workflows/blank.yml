@@ -18,4 +18,4 @@ jobs:
           echo "$cloud $devenv $test"
           echo "${{ runner.name }}"
           echo "${{ github.actor }}"
-          echo "${{ vat.kp }}"
+          echo "${{ vars.kp }}"
