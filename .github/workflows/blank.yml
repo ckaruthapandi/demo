@@ -1,17 +1,15 @@
 name: CI
 on:
-  workflow_dispatch
-    
+  workflow_dispatch 
 env: 
   cloud: Azure
-
 jobs:
   name_of_the_job:
     runs-on: ubuntu-latest
     env:
-      greeting: hello
+      devenv: pandi
     steps:
       env: 
-          name: pandi
+          test: test
       - name: variables
-        run: echo"&cloud $greeting $name"
+        run: echo"&cloud $devenv $test"
