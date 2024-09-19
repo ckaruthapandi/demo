@@ -14,7 +14,7 @@ jobs:
       - name: Set variables
         env: 
           test: test
-        run: 
+        run: |
           echo "$cloud $devenv $test"
           echo "${{ github.runner.name }}"
           echo "${{ github.triggering_actor }}"
