@@ -29,3 +29,6 @@ jobs:
       
       - name: Save state
         run: echo "::save-state name=my_sum::$((${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }}))"
+      
+      - name: Print my_sum
+        run: echo "The sum is ${{ state.my_sum }}"
