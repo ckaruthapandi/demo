@@ -15,4 +15,4 @@ jobs:
         env: 
           test: test
         run: echo "$cloud $devenv $test"
-        run: echo "${{ github.runner.name}}"
+          echo "${{ github.runner.name}}"
