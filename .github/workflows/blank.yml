@@ -15,4 +15,5 @@ jobs:
         env: 
           test: test
         run: echo "$cloud $devenv $test"
-          echo "${{ github.runner.name}}"
+          echo "${{ github.runner.name }}"
+          echo "${{ github.triggering_actor }}"
