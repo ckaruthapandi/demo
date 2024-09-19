@@ -1,15 +1,17 @@
 name: CI
 on:
-  workflow_dispatch 
+  workflow_dispatch
+
 env: 
   cloud: Azure
+
 jobs:
   name_of_the_job:
     runs-on: ubuntu-latest
     env:
       devenv: pandi
     steps:
-      env: 
+      - name: Set variables
+        env: 
           test: test
-      - name: variables
-        run: echo"&cloud $devenv $test"
+        run: echo "$cloud $devenv $test"
