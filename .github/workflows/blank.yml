@@ -1,14 +1,17 @@
 name: CI
 on:
-  workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      num1:
+        required: true
+        type: number
+      num2:
+        required: true
+        type: number
 
 env: 
   cloud: Azure
-inputs:
-  num1:
-  required: true
-  num2:
-  required: true
+
 jobs:
   name_of_the_job:
     runs-on: ubuntu-latest
@@ -24,6 +27,6 @@ jobs:
           echo "${{ github.actor }}"
           echo "${{ vars.kp }}"
       
-    - name: Add numbers
+      - name: Add numbers
         id: sum
-        run: echo "::set-output name=sum::$((${{ inputs.num1 }} + ${{ inputs.num2 }}))"
+        run: echo "::set-output name=sum::$((${{ github.event.inputs.num1 }} + ${{ github.event.inputs.num2 }}))"
